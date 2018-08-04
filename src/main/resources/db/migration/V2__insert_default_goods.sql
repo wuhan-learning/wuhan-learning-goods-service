@@ -1,0 +1,1 @@
+INSERT INTO mst_goods(name) VALUES('javascript权威指南'),('Java程序设计');

@@ -1,0 +1,9 @@
+server:
+  port: 8092
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mst_goods
+    username: root
+    password: dev
+    driver-class-name: com.mysql.jdbc.Driver
