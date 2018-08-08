@@ -1,1 +1,0 @@
-INSERT INTO mst_good(name) VALUES('javascript权威指南'),('Java程序设计');
