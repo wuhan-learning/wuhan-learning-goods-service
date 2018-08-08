@@ -1,1 +1,1 @@
-INSERT INTO mst_goods(name) VALUES('javascript权威指南'),('Java程序设计');
+INSERT INTO mst_good(name) VALUES('javascript权威指南'),('Java程序设计');
