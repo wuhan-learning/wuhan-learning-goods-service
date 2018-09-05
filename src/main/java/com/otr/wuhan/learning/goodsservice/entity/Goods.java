@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Good {
+public class Goods {
 
     @JsonProperty
     private long id;

@@ -1,12 +1,10 @@
 package com.otr.wuhan.learning.goodsservice.controller;
 
-import com.otr.wuhan.learning.goodsservice.entity.Good;
-import com.otr.wuhan.learning.goodsservice.service.GoodService;
+import com.otr.wuhan.learning.goodsservice.entity.Goods;
+import com.otr.wuhan.learning.goodsservice.service.GoodsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -16,12 +14,16 @@ import java.util.List;
 public class GoodsController {
 
     @Autowired
-    private GoodService goodService;
+    private GoodsService goodsService;
+
+    @GetMapping("/{id}")
+    public Goods findGoodsById(@PathVariable("id") String id) {
+        return goodsService.findGoodsById(id);
+    }
 
     @GetMapping
-    public List<Good> findAllGood() {
-        log.info("called");
-        return goodService.findAllGood();
+    public List<Goods> findAllGoods(@RequestParam(value = "action", required = false) String action) throws InterruptedException {
+        return goodsService.findAllGoods(action);
     }
 
 }
