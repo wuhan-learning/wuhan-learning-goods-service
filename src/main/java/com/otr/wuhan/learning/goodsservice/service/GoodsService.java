@@ -14,7 +14,7 @@ public class GoodsService {
     }
 
     public List<Goods> findAllGoods(String action) throws InterruptedException {
-        if (!"close".equals(action)) {
+        if ("sleep".equals(action)) {
             Thread.sleep(4000l);
         }
         return Arrays.asList(
